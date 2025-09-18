@@ -7,6 +7,7 @@ import ConverterModal from '@/components/ConverterModal';
 import { Converter } from '@/types/converter';
 import Footer from './Footer';
 import Header from './Header';
+import UnitConverter from './Unit';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -54,6 +55,12 @@ export default function Home() {
       <div className="min-h-screen flex flex-col bg-gray-50">
         {/* Header */}
        <Header/>
+
+          <div className='mt-32 px-4'>
+
+       <UnitConverter/>
+
+       </div>
         {/* Main content */}
         <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Search + Filters */}
