@@ -30,7 +30,7 @@ export default function TermsPage() {
       <Header />
 
       {/* Main content */}
-      <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="flex-1 max-w-4xl mt-16 mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Terms & Conditions</h1>
         <p className="text-gray-700 mb-8 leading-relaxed">
           Welcome to Universal Converter. By using our website and tools, you agree to comply with the following Terms & Conditions. 

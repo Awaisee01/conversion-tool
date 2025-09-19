@@ -32,7 +32,7 @@ export default function SupportPage() {
       <Header />
 
       {/* Main content */}
-      <main className="flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="flex-1 mt-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Support</h1>
         <p className="text-gray-700 mb-10 leading-relaxed max-w-3xl">
           Need help with Universal Converter? You can browse our FAQs or use the contact form 

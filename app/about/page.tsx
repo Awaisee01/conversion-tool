@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
-      <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="flex-1 mt-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">About Universal Converter</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           <strong>Universal Converter</strong> is your all-in-one platform for fast, accurate, and reliable conversions. 

@@ -30,7 +30,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Main content */}
-      <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="flex-1 mt-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
           <p className="text-gray-700 mb-10 leading-relaxed">

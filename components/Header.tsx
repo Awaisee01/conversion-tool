@@ -45,7 +45,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <Calculator className="h-8 w-8 text-gray-900" />
           <Link href="/">
-            <h1 className="text-2xl font-bold text-gray-900 cursor-pointer">
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 cursor-pointer">
               Universal Converter
             </h1>
           </Link>
