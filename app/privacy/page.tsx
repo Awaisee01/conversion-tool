@@ -3,23 +3,23 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Universal Converter",
+  title: "Privacy Policy | Pro Unit Converters",
   description:
-    "Read the Privacy Policy of Universal Converter. Learn how we collect, use, and protect your personal data while ensuring transparency and security.",
+    "Read the Privacy Policy of ProUnitConverters.com. Learn how we collect, use, and protect your personal data while ensuring transparency and security.",
   keywords: [
     "privacy policy",
-    "universal converter privacy",
+    "Pro Unit Converters privacy",
     "data protection",
     "user data security",
     "GDPR compliance",
     "online converter privacy",
   ],
   openGraph: {
-    title: "Privacy Policy | Universal Converter",
+    title: "Privacy Policy | Pro Unit Converters",
     description:
-      "Understand how Universal Converter collects, uses, and protects your information when using our tools.",
-    url: "https://yourdomain.com/privacy-policy",
-    siteName: "Universal Converter",
+      "Understand how ProUnitConverters.com collects, uses, and protects your information when using our tools.",
+    url: "https://prounitconverters.com/privacy-policy",
+    siteName: "Pro Unit Converters",
     type: "website",
   },
 };
@@ -28,16 +28,15 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Header />
-      <div className=" flex flex-col bg-gray-50">
-      
+      <div className="flex flex-col bg-gray-50">
         <main className="flex-1 mt-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">
             Privacy Policy
           </h1>
           <p className="text-gray-700 mb-8 leading-relaxed">
-            Your privacy is important to us. This Privacy Policy explains how
-            Universal Converter collects, uses, and protects your information
-            when you use our website and tools.
+            Your privacy is important to us. This Privacy Policy explains how{" "}
+            <strong>ProUnitConverters.com</strong> collects, uses, and protects
+            your information when you use our website and tools.
           </p>
 
           <div className="space-y-8 text-gray-700 leading-relaxed">
@@ -58,7 +57,7 @@ export default function PrivacyPolicyPage() {
                 2. How We Use Your Information
               </h2>
               <p>The information we collect is used to:</p>
-              <ul className="list-disc list-inside mt-2">
+              <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>Provide and improve our conversion tools</li>
                 <li>Respond to inquiries and feedback</li>
                 <li>Monitor site usage for analytics and performance</li>
@@ -108,7 +107,7 @@ export default function PrivacyPolicyPage() {
                 You may request access, correction, or deletion of your personal
                 data by contacting us at{" "}
                 <span className="font-medium">
-                  support@universalconverter.com
+                  support@prounitconverters.com
                 </span>
                 .
               </p>
@@ -126,8 +125,6 @@ export default function PrivacyPolicyPage() {
             </section>
           </div>
         </main>
-
-        {/* Footer */}
       </div>
       <Footer />
     </>

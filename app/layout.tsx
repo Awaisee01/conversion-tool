@@ -1,55 +1,54 @@
 import PWAInstallPrompt from "@/components/Install";
 import "./globals.css";
 import type { Metadata } from "next";
-import Script from "next/script"; // ✅ needed for JSON-LD + AdSense scripts
+import Script from "next/script"; // ✅ needed for JSON-LD + GA + AdSense scripts
 
 export const metadata: Metadata = {
-  title: "Universal Converter | Free Online File & Format Tools",
+  title: "Pro Unit Converters | Free Online Measurement Converter for Length, Weight, Temperature, Time & More",
   description:
-    "Universal Converter is your all-in-one platform for quick, secure, and accurate file conversions. Convert documents, images, and more online without hassle.",
+    "Convert any unit instantly with ProUnitConverters.com! Free online measurement converter for length, weight, temperature, time, currency, and more. Fast, accurate, and mobile-friendly.",
   keywords: [
     "file converter",
-    "universal converter",
+    "Pro Unit Converters",
     "online converter",
-    "pdf to word",
-    "image to pdf",
+    "Pro Unit Converters",
     "free converter tool",
   ],
-  authors: [{ name: "Universal Converter Team" }],
-  creator: "Universal Converter",
+  authors: [{ name: "Pro Unit Converters" }],
+  creator: "Pro Unit Converters",
   publisher: "Universal Converter",
   applicationName: "Universal Converter",
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://prounitconverters.com/"),
 
   openGraph: {
-    title: "Universal Converter | Free Online File & Format Tools",
+    title: "Pro Unit Converters | Free Online Measurement Converter for Length, Weight, Temperature, Time & More",
     description:
-      "Convert your files quickly and securely with Universal Converter. Supports documents, images, and more — all free and online.",
-    url: "https://yourdomain.com",
-    siteName: "Universal Converter",
+      "Convert any unit instantly with ProUnitConverters.com! Free online measurement converter for length, weight, temperature, time, currency, and more. Fast, accurate, and mobile-friendly.",
+    url: "https://prounitconverters.com/",
+    siteName: "Pro Unit Converters",
     type: "website",
     images: [
       {
-        url: "https://yourdomain.com/icons/icon-512x512.png",
+        url: "https://prounitconverters.com/favicon.ico",
         width: 512,
         height: 512,
-        alt: "Universal Converter Logo",
+        alt: "Pro Unit Converters Logo",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Universal Converter | Free Online File & Format Tools",
+    title: "Pro Unit Converters | Free Online Unit & Format Tools",
     description:
-      "Free online tool to convert documents, images, and more. Simple, secure, and fast conversions.",
-    images: ["https://yourdomain.com/icons/icon-512x512.png"],
-    creator: "@yourhandle", // replace with your Twitter handle
+      "Convert any unit instantly with ProUnitConverters.com! Free online measurement converter for length, weight, temperature, time, currency, and more. Fast, accurate, and mobile-friendly.",
+    images: ["https://prounitconverters.com/favicon.ico"],
+    creator: "@ProUnitConverters",
   },
 
   icons: {
     icon: "/favicon.ico",
-    apple: "/icons/icon-192x192.png",
+    apple: "/favicon.ico",
   },
 
   manifest: "/manifest.json",
@@ -67,7 +66,7 @@ export default function RootLayout({
         {/* PWA essentials */}
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+        <link rel="apple-touch-icon" href="/pwa-192.png" />
         <meta name="theme-color" content="#000000" />
 
         {/* ✅ Google AdSense verification */}
@@ -82,21 +81,21 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Universal Converter",
-              url: "https://yourdomain.com",
+              name: "Pro Unit Converters",
+              url: "https://prounitconverters.com/",
               description:
-                "Universal Converter is your all-in-one platform for quick, secure, and accurate file conversions.",
+                "Convert any unit instantly with ProUnitConverters.com! Free online measurement converter for length, weight, temperature, time, currency, and more. Fast, accurate, and mobile-friendly.",
               publisher: {
                 "@type": "Organization",
-                name: "Universal Converter",
+                name: "Pro Unit Converters",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://yourdomain.com/icons/icon-512x512.png",
+                  url: "https://prounitconverters.com/favicon.ico",
                 },
               },
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://yourdomain.com/search?q={search_term_string}",
+                target: "https://prounitconverters.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),
@@ -106,6 +105,24 @@ export default function RootLayout({
       <body>
         {children}
         <PWAInstallPrompt />
+
+        {/* ✅ Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ETSYG1GT5K"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-ETSYG1GT5K');
+            `,
+          }}
+        />
 
         {/* ✅ Load AdSense JS */}
         <Script

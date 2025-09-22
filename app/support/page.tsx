@@ -4,23 +4,23 @@ import { HelpCircle, MessageSquare } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Support | Universal Converter',
+  title: 'Support | Pro Unit Converters',
   description:
-    'Find support for Universal Converter. Browse FAQs or reach out through our contact page if you need further assistance.',
+    'Get support for Pro Unit Converters. Browse FAQs or reach out via our contact page for assistance with your conversion needs.',
   keywords: [
     'support',
     'help center',
     'FAQ',
-    'universal converter support',
-    'converter assistance',
-    'conversion tools help'
+    'Pro Unit Converters support',
+    'unit converter help',
+    'conversion tools assistance'
   ],
   openGraph: {
-    title: 'Support | Universal Converter',
+    title: 'Support | Pro Unit Converters',
     description:
-      'Need help with Universal Converter? Browse FAQs or contact our team for assistance.',
-    url: 'https://yourdomain.com/support',
-    siteName: 'Universal Converter',
+      'Need help with Pro Unit Converters? Explore FAQs or contact our team for personalized support.',
+    url: 'https://prounitconverters.com/support',
+    siteName: 'Pro Unit Converters',
     type: 'website'
   }
 };
@@ -35,8 +35,8 @@ export default function SupportPage() {
       <main className="flex-1 mt-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Support</h1>
         <p className="text-gray-700 mb-10 leading-relaxed max-w-3xl">
-          Need help with Universal Converter? You can browse our FAQs or use the contact form 
-          on our site to send us a message. We’re here to assist you!
+          Need help with <strong>Pro Unit Converters</strong>? You can browse our FAQs 
+          or use the contact form on our site to send us a message. We’re here to assist you!
         </p>
 
         {/* FAQ Section */}
@@ -70,7 +70,7 @@ export default function SupportPage() {
               </summary>
               <p className="text-gray-600 mt-2">
                 Yes! You can request a new tool through our contact form, and our team will 
-                consider adding it to Universal Converter.
+                consider adding it to <strong>Pro Unit Converters</strong>.
               </p>
             </details>
           </div>

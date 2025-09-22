@@ -1,7 +1,8 @@
-'use client';
-import { Calculator, Menu, X } from 'lucide-react';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+"use client";
+import { Calculator, Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
@@ -15,15 +16,15 @@ const Header = () => {
       setShowInstall(true);
     };
 
-    window.addEventListener('beforeinstallprompt', handler);
-    return () => window.removeEventListener('beforeinstallprompt', handler);
+    window.addEventListener("beforeinstallprompt", handler);
+    return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    console.log('User choice:', outcome);
+    console.log("User choice:", outcome);
     setDeferredPrompt(null);
     setShowInstall(false);
   };
@@ -32,22 +33,34 @@ const Header = () => {
 
   const navLinks = (
     <>
-      <Link href="/" className="block px-3 py-2 rounded hover:bg-gray-100">Home</Link>
-      <Link href="/about" className="block px-3 py-2 rounded hover:bg-gray-100">About</Link>
-      <Link href="/contact" className="block px-3 py-2 rounded hover:bg-gray-100">Contact</Link>
+      <Link href="/" className="block px-3 py-2 rounded hover:bg-gray-100">
+        Home
+      </Link>
+      <Link href="/about" className="block px-3 py-2 rounded hover:bg-gray-100">
+        About
+      </Link>
+      <Link
+        href="/contact"
+        className="block px-3 py-2 rounded hover:bg-gray-100"
+      >
+        Contact
+      </Link>
     </>
   );
 
   return (
-    <header className="bg-white shadow-sm border-b fixed w-full z-50">
+    <header className="bg-white shadow-sm border-b fixed w-full z-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <Calculator className="h-8 w-8 text-gray-900" />
           <Link href="/">
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 cursor-pointer">
-              Universal Converter
-            </h1>
+            <Image
+              src="/logo.png"
+              alt="Universal Converter Logo"
+              width={100}
+              height={100}
+              className="w-[150px] h-[100px]"
+            />
           </Link>
         </div>
 
@@ -66,8 +79,15 @@ const Header = () => {
 
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center">
-          <button onClick={toggleMobileMenu} className="p-2 rounded hover:bg-gray-100">
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <button
+            onClick={toggleMobileMenu}
+            className="p-2 rounded hover:bg-gray-100"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
       </div>
