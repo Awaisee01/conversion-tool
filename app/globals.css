@@ -80,3 +80,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+input{
+  outline: none;
+}
+textarea{
+  outline: none;
+}
