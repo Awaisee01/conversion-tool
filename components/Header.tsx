@@ -60,6 +60,9 @@ const Header = () => {
               width={100}
               height={100}
               className="w-[150px] h-[100px]"
+              fetchPriority="high"
+              priority
+              decoding="async"
             />
           </Link>
         </div>
