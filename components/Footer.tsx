@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <Image
-              src="/logo.png"
+              src="/log.png"
               alt="Pro Unit Converters Logo"
               width={100}
               height={100}
