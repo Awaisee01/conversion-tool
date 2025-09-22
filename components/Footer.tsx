@@ -21,9 +21,9 @@ const Footer = () => {
             </span>
           </div>
           <p className="text-sm leading-relaxed text-black">
-            Pro Unit Converters provides accurate and easy-to-use conversion
-            tools for everyday and professional needs. Convert units quickly,
-            reliably, and securely.
+            Convert any unit instantly with ProUnitConverters.com! Free online
+            measurement converter for length, weight, temperature, time,
+            currency, and more. Fast, accurate, and mobile-friendly.
           </p>
         </div>
 
