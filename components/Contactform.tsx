@@ -16,7 +16,7 @@ export default function ContactForm() {
     const data = new FormData(form);
 
     try {
-      const response = await fetch('https://formsubmit.co/malikcwais336@gmail.com', {
+      const response = await fetch('https://formsubmit.co/prounitconverters@gmail.com', {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
@@ -57,7 +57,7 @@ export default function ContactForm() {
           <input
             type="email"
             id="email"
-            name="email"
+            name="email"    
             className="mt-1 w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 focus:ring-2 focus:ring-gray-900 focus:border-transparent"
             placeholder="you@example.com"
             required
