@@ -1,15 +1,16 @@
-import PWAInstallPrompt from "@/components/Install";
 import "./globals.css";
 import type { Metadata } from "next";
-import Script from "next/script"; // ✅ needed for JSON-LD + GA + AdSense scripts
+import Script from "next/script";
+import PWAInstallPrompt from "@/components/Install";
 
 export const metadata: Metadata = {
-  title: "Pro Unit Converters | Free Online Measurement Converter for Length, Weight, Temperature, Time & More",
+  title:
+    "Pro Unit Converters | Free Online Measurement Converter for Length, Weight, Temperature, Time & More",
   description:
     "Convert any unit instantly with ProUnitConverters.com! Free online measurement converter for length, weight, temperature, time, currency, and more. Fast, accurate, and mobile-friendly.",
   keywords: [
+    "unit converter",
     "file converter",
-    "Pro Unit Converters",
     "online converter",
     "Pro Unit Converters",
     "free converter tool",
@@ -21,7 +22,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://prounitconverters.com/"),
 
   openGraph: {
-    title: "Pro Unit Converters | Free Online Measurement Converter for Length, Weight, Temperature, Time & More",
+    title:
+      "Pro Unit Converters | Free Online Measurement Converter for Length, Weight, Temperature, Time & More",
     description:
       "Convert any unit instantly with ProUnitConverters.com! Free online measurement converter for length, weight, temperature, time, currency, and more. Fast, accurate, and mobile-friendly.",
     url: "https://prounitconverters.com/",
@@ -63,16 +65,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* PWA essentials */}
+        {/* ✅ PWA Essentials */}
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/pwa-192.png" />
         <meta name="theme-color" content="#000000" />
 
-        {/* ✅ Google AdSense verification */}
-        <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX" />
+        {/* ✅ Google AdSense Verification */}
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-4995058871941087"
+        />
 
-        {/* ✅ Structured Data (JSON-LD for SEO) */}
+        {/* ✅ Structured Data for SEO */}
         <Script
           id="ld-json"
           type="application/ld+json"
@@ -95,13 +100,15 @@ export default function RootLayout({
               },
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://prounitconverters.com/search?q={search_term_string}",
+                target:
+                  "https://prounitconverters.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),
           }}
         />
       </head>
+
       <body>
         {children}
         <PWAInstallPrompt />
@@ -124,13 +131,13 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ Load AdSense JS */}
+        {/* ✅ Google AdSense */}
         <Script
           id="adsense-script"
           async
           strategy="afterInteractive"
           crossOrigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4995058871941087"
         />
       </body>
     </html>
